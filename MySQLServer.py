@@ -41,8 +41,8 @@ def create_alx_book_store_db():
         else:
             print("FAILED: Could not establish a connection to the MySQL Server.")
 
-    except Error as e:
-        
+    except mysql.connector.Error as e:
+      
         print(f"ERROR: Failed to connect to DB or execute query: {e}")
         
     finally:
